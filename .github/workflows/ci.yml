@@ -89,16 +89,25 @@ jobs:
         if: failure()
         run: |
           python3 -c "
-          import xml.etree.ElementTree as ET, sys
+          import xml.etree.ElementTree as ET
           tree = ET.parse('results/output.xml')
+          printed = 0
           for test in tree.getroot().iter('test'):
               s = test.find('status')
-              if s is not None and s.get('status') == 'FAIL':
-                  print(f'FAIL: {test.get(\"name\")}')
-                  for m in test.iter('msg'):
-                      if m.text and any(k in (m.text or '') for k in ['Error','Timeout','!=','waiting','strict']):
-                          print(f'  {m.text[:300]}')
-                  print()
+              if s is None or s.get('status') != 'FAIL':
+                  continue
+              print(f'FAIL: {test.get(\"name\")}')
+              if s.text:
+                  print(f'  STATUS: {s.text[:500]}')
+              for m in test.iter('msg'):
+                  lvl = m.get('level', '')
+                  if lvl in ('FAIL', 'ERROR', 'WARN') and m.text:
+                      print(f'  [{lvl}] {m.text[:500]}')
+              print()
+              printed += 1
+              if printed >= 5:
+                  print(f'... (showing first 5 failures only)')
+                  break
           "
 
       - name: Upload Report
