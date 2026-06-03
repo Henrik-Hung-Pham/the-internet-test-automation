@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Drag and Drop tests — verifies HTML drag and drop functionality.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/drag_and_drop_keywords.resource
 

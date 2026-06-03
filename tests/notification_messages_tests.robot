@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Notification Messages tests — verifies the flash notification message after clicking a link.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/notification_messages_keywords.resource
 

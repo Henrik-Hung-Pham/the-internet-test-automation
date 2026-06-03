@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Status Codes Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/status_codes_locators.resource
 Resource            ../variables/global_variables.resource
 

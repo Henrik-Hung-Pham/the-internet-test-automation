@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Floating Menu Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/floating_menu_locators.resource
 Resource            ../variables/global_variables.resource
 

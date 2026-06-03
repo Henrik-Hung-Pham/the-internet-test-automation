@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       File Download Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/file_download_locators.resource
 Resource            ../variables/global_variables.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Context Menu Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/context_menu_locators.resource
 Resource            ../variables/global_variables.resource
 

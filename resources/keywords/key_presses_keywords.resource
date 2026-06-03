@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Key Presses Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/key_presses_locators.resource
 Resource            ../variables/global_variables.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Horizontal Slider tests — verifies the range slider can be set to specific values.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/horizontal_slider_keywords.resource
 

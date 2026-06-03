@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Notification Messages Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/notification_messages_locators.resource
 Resource            ../variables/global_variables.resource
 

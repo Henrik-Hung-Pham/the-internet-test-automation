@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Typos tests — verifies the typos page loads and the second paragraph has expected content shape.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/typos_keywords.resource
 

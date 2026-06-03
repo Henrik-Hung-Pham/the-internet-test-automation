@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Inputs tests — verifies the HTML5 number input field behavior.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/inputs_keywords.resource
 

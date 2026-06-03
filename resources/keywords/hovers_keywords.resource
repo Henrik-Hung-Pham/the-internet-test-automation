@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Hovers Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/hovers_locators.resource
 Resource            ../variables/global_variables.resource
 

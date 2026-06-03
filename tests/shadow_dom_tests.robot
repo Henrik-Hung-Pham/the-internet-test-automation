@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Shadow DOM tests — verifies text content inside Web Component shadow DOM elements.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/shadow_dom_keywords.resource
 

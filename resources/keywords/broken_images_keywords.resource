@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Broken Images Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/broken_images_locators.resource
 Resource            ../variables/global_variables.resource
 

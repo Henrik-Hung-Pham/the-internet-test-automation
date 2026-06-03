@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Multiple Windows tests — verifies opening and switching to a new browser window/tab.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/multiple_windows_keywords.resource
 

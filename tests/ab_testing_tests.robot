@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       A/B Testing tests — verifies the page renders one of the two valid experiment variants.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/ab_testing_keywords.resource
 

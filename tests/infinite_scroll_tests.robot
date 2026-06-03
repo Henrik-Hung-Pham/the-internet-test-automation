@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Infinite Scroll tests — verifies new content loads as the page is scrolled down.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/infinite_scroll_keywords.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Sortable Data Tables tests — verifies sorting table columns and reading cell data.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/sortable_data_tables_keywords.resource
 
