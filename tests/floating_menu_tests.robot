@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Floating Menu tests — verifies the navigation menu remains fixed during page scroll.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/floating_menu_keywords.resource
 

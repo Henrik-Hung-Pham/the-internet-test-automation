@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Checkboxes Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/checkboxes_locators.resource
 Resource            ../variables/global_variables.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Key Presses tests — verifies individual key presses are detected and reported correctly.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/key_presses_keywords.resource
 

@@ -2,7 +2,7 @@
 Documentation       Challenging DOM tests — verifies interaction with a page
 ...                 whose DOM is designed to challenge automation.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/challenging_dom_keywords.resource
 

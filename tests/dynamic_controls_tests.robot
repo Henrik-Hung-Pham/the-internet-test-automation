@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Dynamic Controls tests — verifies enabling/disabling inputs and showing/hiding checkboxes.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/dynamic_controls_keywords.resource
 

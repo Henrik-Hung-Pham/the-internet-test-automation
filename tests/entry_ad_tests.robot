@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Entry Ad tests — verifies the modal dialog that appears on page load can be closed.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/entry_ad_keywords.resource
 

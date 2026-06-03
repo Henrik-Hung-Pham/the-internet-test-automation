@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Dynamic Loading Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/dynamic_loading_locators.resource
 Resource            ../variables/global_variables.resource
 

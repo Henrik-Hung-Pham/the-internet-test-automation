@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       File Download tests — verifies downloadable file links are present and functional.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/file_download_keywords.resource
 

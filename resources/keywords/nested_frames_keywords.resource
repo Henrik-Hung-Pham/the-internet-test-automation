@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Nested Frames Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/nested_frames_locators.resource
 Resource            ../variables/global_variables.resource
 

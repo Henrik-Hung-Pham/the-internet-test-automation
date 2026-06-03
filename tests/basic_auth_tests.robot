@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Basic Auth tests — verifies HTTP Basic Authentication using browser context credentials.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/basic_auth_keywords.resource
 

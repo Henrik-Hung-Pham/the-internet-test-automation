@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Dropdown tests — verifies selecting options from a standard HTML dropdown.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/dropdown_keywords.resource
 

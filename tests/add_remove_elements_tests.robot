@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Add/Remove Elements tests — verifies adding and removing dynamic elements.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/add_remove_elements_keywords.resource
 

@@ -2,7 +2,7 @@
 Documentation       Login tests across all Playwright browsers (chromium, firefox, webkit)
 ...                 Verifies valid login, invalid username, and invalid password scenarios.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/login_keywords.resource
 

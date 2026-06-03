@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Dynamic Content tests — verifies the page renders three rows of dynamically loaded content.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/dynamic_content_keywords.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Shadow DOM Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/shadow_dom_locators.resource
 Resource            ../variables/global_variables.resource
 

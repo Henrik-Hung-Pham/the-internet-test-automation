@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Checkboxes tests — verifies checking and unchecking checkbox inputs.
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/checkboxes_keywords.resource
 

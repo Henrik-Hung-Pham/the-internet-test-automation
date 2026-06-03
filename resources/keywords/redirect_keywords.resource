@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Redirect Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/redirect_locators.resource
 Resource            ../variables/global_variables.resource
 

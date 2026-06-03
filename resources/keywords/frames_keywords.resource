@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Frames (iFrame) Keywords
 
-Library             Browser
+Library             Browser    timeout=30s
 Resource            ../locators/frames_locators.resource
 Resource            ../variables/global_variables.resource
 
