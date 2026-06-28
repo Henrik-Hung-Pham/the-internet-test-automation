@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Forgot Password Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/forgot_password_locators.resource
 Resource            ../variables/global_variables.resource
 

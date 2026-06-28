@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Disappearing Elements tests — verifies nav elements that may appear or disappear on reload.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/disappearing_elements_keywords.resource
 

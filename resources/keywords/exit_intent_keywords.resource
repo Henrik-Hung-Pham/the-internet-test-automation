@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Exit Intent Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/exit_intent_locators.resource
 Resource            ../variables/global_variables.resource
 

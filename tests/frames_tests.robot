@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Frames (iFrame) tests — verifies interaction with content inside a TinyMCE iframe editor.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/frames_keywords.resource
 

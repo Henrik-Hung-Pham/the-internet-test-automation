@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Sortable Data Tables Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/sortable_data_tables_locators.resource
 Resource            ../variables/global_variables.resource
 

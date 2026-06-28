@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Dynamic Controls Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/dynamic_controls_locators.resource
 Resource            ../variables/global_variables.resource
 

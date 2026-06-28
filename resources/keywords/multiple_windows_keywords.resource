@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Multiple Windows Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/multiple_windows_locators.resource
 Resource            ../variables/global_variables.resource
 

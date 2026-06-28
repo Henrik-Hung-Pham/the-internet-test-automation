@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       A/B Testing Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/ab_testing_locators.resource
 Resource            ../variables/global_variables.resource
 

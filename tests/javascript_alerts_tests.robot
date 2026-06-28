@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       JavaScript Alerts tests — verifies JS alert, confirm, and prompt dialogs can be handled.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/javascript_alerts_keywords.resource
 

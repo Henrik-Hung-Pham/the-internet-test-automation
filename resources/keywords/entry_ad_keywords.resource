@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Entry Ad Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/entry_ad_locators.resource
 Resource            ../variables/global_variables.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Infinite Scroll Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/infinite_scroll_locators.resource
 Resource            ../variables/global_variables.resource
 

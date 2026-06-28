@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Status Codes tests — verifies each HTTP status code page loads and displays the correct code.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/status_codes_keywords.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Dropdown Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/dropdown_locators.resource
 Resource            ../variables/global_variables.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Broken Images tests — verifies the page loads and counts broken image resources.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/broken_images_keywords.resource
 

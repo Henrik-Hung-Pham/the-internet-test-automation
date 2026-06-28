@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Forgot Password tests — verifies the forgot password form accepts an email and redirects.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/forgot_password_keywords.resource
 

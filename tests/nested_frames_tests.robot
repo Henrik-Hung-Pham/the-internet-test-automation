@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Nested Frames tests — verifies interaction with nested frame elements.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/nested_frames_keywords.resource
 
