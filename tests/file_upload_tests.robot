@@ -23,9 +23,7 @@ Upload Page Has File Input
 Upload A Text File
     [Documentation]    Uploads a temporary text file and verifies its name is shown after upload.
     Open File Upload Page
-    ${fd}    ${temp_file}=    Evaluate    __import__('tempfile').mkstemp(suffix='.txt', prefix='rf_upload_')
-    Evaluate    __import__('os').close($fd)
-    Evaluate    open($temp_file, 'w').write('Robot Framework upload test')
+    ${temp_file}=    Create Temporary Text File
     Upload File    ${temp_file}
     Verify Uploaded Filename    rf_upload_
-    Evaluate    __import__('os').remove($temp_file)
+    Remove Temporary File    ${temp_file}

@@ -22,3 +22,17 @@ Verify Uploaded Filename
     [Arguments]    ${expected_filename}
     Wait For Elements State    ${UPLOADED_FILES}    visible    timeout=10s
     Get Text    ${UPLOADED_FILES}    *=    ${expected_filename}
+
+Create Temporary Text File
+    [Documentation]    Creates a temporary .txt file with sample content and returns its path.
+    ...                The mkstemp file descriptor is closed so the file can be reopened on Windows.
+    [Arguments]    ${prefix}=rf_upload_    ${content}=Robot Framework upload test
+    ${fd}    ${temp_file}=    Evaluate    tempfile.mkstemp(suffix='.txt', prefix=$prefix)    modules=tempfile
+    Evaluate    os.close($fd)    modules=os
+    Evaluate    open($temp_file, 'w').write($content)
+    RETURN    ${temp_file}
+
+Remove Temporary File
+    [Documentation]    Deletes the given temporary file from disk.
+    [Arguments]    ${file_path}
+    Evaluate    os.remove($file_path)    modules=os
