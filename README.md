@@ -33,10 +33,16 @@ This project contains automated tests for [The Internet](https://the-internet.he
 
 ## Running Tests
 
-To run the login tests:
+To run the whole suite:
 
 ```bash
-robot tests/login_tests.robot
+robot tests/
+```
+
+To run a single suite (e.g. the cross-browser login tests):
+
+```bash
+robot tests/login_cross_browser_tests.robot
 ```
 
 
