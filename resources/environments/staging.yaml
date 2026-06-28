@@ -1,4 +1,6 @@
 # Staging Environment Configuration
-URL_LOGIN: https://staging.the-internet.herokuapp.com/login
+# Override BASE_URL only — every URL_* in global_variables.resource is derived
+# from ${BASE_URL}, so all pages follow the selected environment.
+BASE_URL: https://staging.the-internet.herokuapp.com
 USERNAME: staging_user
 PASSWORD: StagingPassword123!
