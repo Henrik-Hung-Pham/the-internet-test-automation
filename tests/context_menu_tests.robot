@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Context Menu tests — verifies right-click context menu triggers a JavaScript alert.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/context_menu_keywords.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Challenging DOM Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/challenging_dom_locators.resource
 Resource            ../variables/global_variables.resource
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Add/Remove Elements Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/add_remove_elements_locators.resource
 Resource            ../variables/global_variables.resource
 

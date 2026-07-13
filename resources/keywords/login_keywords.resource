@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Login Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/login_locators.resource
 Resource            ../variables/global_variables.resource
 

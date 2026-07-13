@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       WYSIWYG Editor tests — verifies the TinyMCE rich text editor can be interacted with.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/wysiwyg_editor_keywords.resource
 

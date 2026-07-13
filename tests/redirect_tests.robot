@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Redirect tests — verifies the redirect link navigates to the status codes page.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/redirect_keywords.resource
 

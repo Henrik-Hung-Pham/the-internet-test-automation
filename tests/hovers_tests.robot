@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Hovers tests — verifies hovering over images reveals user profile captions.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/hovers_keywords.resource
 

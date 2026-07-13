@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Inputs Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/inputs_locators.resource
 Resource            ../variables/global_variables.resource
 

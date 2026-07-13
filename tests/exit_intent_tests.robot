@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Exit Intent tests — verifies the modal that appears when the user moves to leave the page.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/exit_intent_keywords.resource
 

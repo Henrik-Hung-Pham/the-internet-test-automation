@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Dynamic Content Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/dynamic_content_locators.resource
 Resource            ../variables/global_variables.resource
 

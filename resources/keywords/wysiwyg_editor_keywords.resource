@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       WYSIWYG Editor Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/wysiwyg_editor_locators.resource
 Resource            ../variables/global_variables.resource
 

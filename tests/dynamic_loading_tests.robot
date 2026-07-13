@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Dynamic Loading tests — verifies waiting for elements that are hidden or rendered asynchronously.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/dynamic_loading_keywords.resource
 

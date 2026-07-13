@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       JavaScript Alerts Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/javascript_alerts_locators.resource
 Resource            ../variables/global_variables.resource
 

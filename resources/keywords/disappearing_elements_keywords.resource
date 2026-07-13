@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Disappearing Elements Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/disappearing_elements_locators.resource
 Resource            ../variables/global_variables.resource
 

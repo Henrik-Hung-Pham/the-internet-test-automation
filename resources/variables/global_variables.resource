@@ -43,5 +43,6 @@ ${URL_TYPOS}                    ${BASE_URL}/typos
 ${URL_WYSIWYG_EDITOR}           ${BASE_URL}/tinymce
 ${HEADLESS}                     True
 ${BROWSER}                      chromium
+${BROWSER_TIMEOUT}              30s
 ${USERNAME}                     tomsmith
 ${PASSWORD}                     SuperSecretPassword!

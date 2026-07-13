@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Basic Auth Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/basic_auth_locators.resource
 Resource            ../variables/global_variables.resource
 

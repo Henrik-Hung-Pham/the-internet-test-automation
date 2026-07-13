@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Horizontal Slider Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/horizontal_slider_locators.resource
 Resource            ../variables/global_variables.resource
 
