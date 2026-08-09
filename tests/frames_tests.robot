@@ -1,5 +1,8 @@
 *** Settings ***
 Documentation       Frames (iFrame) tests — verifies interaction with content inside a TinyMCE iframe editor.
+...                 Typing tests drive the real keyboard. When the hosted TinyMCE is locked
+...                 into read-only mode they skip rather than pass, because there is no
+...                 honest way to exercise typing against a read-only editor.
 
 Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
@@ -22,16 +25,20 @@ IFrame Editor Is Present
     Wait For Elements State    ${IFRAME}    visible
 
 Type Text In IFrame Editor
-    [Documentation]    Verifies text can be typed inside the TinyMCE iframe editor.
+    [Documentation]    Verifies text typed on the keyboard reaches the TinyMCE iframe editor.
     [Tags]    smoke
     Open Frames Page
+    Skip Test If Editor Is Read Only
     Type In Editor    Hello from Robot Framework
     Verify Editor Content    Hello from Robot Framework
 
 Clear And Retype In IFrame Editor
-    [Documentation]    Verifies the editor content can be cleared and replaced with new text.
+    [Documentation]    Verifies retyping replaces the previous content instead of appending to it.
     [Tags]    regression
     Open Frames Page
+    Skip Test If Editor Is Read Only
     Type In Editor    Initial text
+    Verify Editor Content    Initial text
     Type In Editor    Replaced text
     Verify Editor Content    Replaced text
+    Verify Editor Does Not Contain Text    Initial text
