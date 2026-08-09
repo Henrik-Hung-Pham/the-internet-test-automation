@@ -91,19 +91,25 @@ docker-compose up --build
     -   `keywords/`: Higher-level keywords.
     -   `locators/`: UI element locators.
     -   `variables/`: Global configuration and test data.
-    -   `environments/`: Environment-specific config files (dev, staging, prod).
+    -   `environments/`: Environment-specific config files.
 
 ## Environment Configuration
 
-To run tests against different environments:
+The application under test, [the-internet](https://the-internet.herokuapp.com/), is a
+single public deployment — it has no dev or staging tier. So there is exactly one
+environment file, and it is the one CI actually runs:
 
 ```bash
-# Dev (default)
-pabot --testlevelsplit --variablefile resources/environments/dev.yaml tests/
-
-# Staging
-pabot --testlevelsplit --variablefile resources/environments/staging.yaml tests/
-
-# Production
 pabot --testlevelsplit --variablefile resources/environments/prod.yaml tests/
 ```
+
+To add an environment, copy `resources/environments/example.yaml.template` to
+`<name>.yaml` and pass it with `--variablefile`. Overriding `BASE_URL` is enough —
+every `URL_*` in `resources/variables/global_variables.resource` is derived from it,
+so all pages follow the selected environment.
+
+Environment files should point at hosts that exist. A `dev.yaml` aimed at a
+non-existent server is worse than no file at all: it implies coverage that was never
+run. Credentials belong in the CI secret store rather than in version control
+(`--variable PASSWORD:%{APP_PASSWORD}`); they are committed here only because this
+demo site publishes its own logins.
