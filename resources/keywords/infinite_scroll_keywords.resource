@@ -20,8 +20,11 @@ Get Paragraph Count
 
 Scroll Down By Pixels
     [Documentation]    Scrolls the page down by a given number of pixels.
+    ...                With a ${None} selector, ``arg`` is the function's first parameter —
+    ...                the previous ``(_, px)`` signature left ``px`` undefined, so this
+    ...                scrolled by nothing at all.
     [Arguments]    ${pixels}=500
-    Evaluate JavaScript    ${None}    (_, px) => window.scrollBy(0, px)    arg=${pixels}
+    Evaluate JavaScript    ${None}    (px) => window.scrollBy(0, Number(px))    arg=${pixels}
 
 Wait For More Paragraphs
     [Documentation]    Retries scrolling to the bottom until jscroll loads additional content.

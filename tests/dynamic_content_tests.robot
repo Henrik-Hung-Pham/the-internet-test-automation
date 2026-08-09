@@ -28,10 +28,12 @@ Page Renders Content Images
     Verify Content Images Are Present
 
 Content Changes On Reload
-    [Documentation]    Verifies page content text is present (content itself may vary on reload).
+    [Documentation]    Verifies the page actually regenerates its content on reload — which is
+    ...                the behaviour this example exists to demonstrate. Asserting only that
+    ...                the text is non-empty would pass on a completely static page.
     [Tags]    regression
     Open Dynamic Content Page
     ${text_first_load}=    Get Row Text    1
     Should Not Be Empty    ${text_first_load}
-    Reload
+    Reload Until Row Text Changes    1    ${text_first_load}
     Verify Content Rows Are Present
