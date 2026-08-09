@@ -17,7 +17,7 @@ Test Tags           frames    javascript
 *** Test Cases ***
 IFrame Editor Is Present
     [Documentation]    Verifies the TinyMCE iframe is visible on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Frames Page
     Wait For Elements State    ${IFRAME}    visible
 

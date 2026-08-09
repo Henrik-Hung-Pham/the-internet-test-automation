@@ -17,7 +17,7 @@ Test Tags           navigation    notification-messages
 *** Test Cases ***
 Notification Link Is Present
     [Documentation]    Verifies the "Click here" link is visible on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Notification Messages Page
     Wait For Elements State    ${CLICK_HERE_LINK}    visible
 
@@ -30,7 +30,7 @@ Click Link Shows Flash Message
 
 Flash Message Contains Valid Text
     [Documentation]    Verifies the flash message text is one of the expected notification variants.
-    [Tags]    smoke
+    [Tags]    regression
     Open Notification Messages Page
     Click Notification Link
     Verify Flash Message Contains Valid Text

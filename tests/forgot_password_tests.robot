@@ -17,7 +17,7 @@ Test Tags           forms    forgot-password
 *** Test Cases ***
 Forgot Password Page Loads
     [Documentation]    Verifies the forgot password page renders the email input and submit button.
-    [Tags]    smoke
+    [Tags]    regression
     Open Forgot Password Page
     Wait For Elements State    ${EMAIL_INPUT}      visible
     Wait For Elements State    ${RETRIEVE_BUTTON}  visible

@@ -10,16 +10,18 @@ Suite Teardown      Close Browser
 
 Test Teardown       Close Context
 
-Test Tags           security    basic-auth    smoke
+Test Tags           security    basic-auth
 
 
 *** Test Cases ***
 Successful Login With Valid Credentials
     [Documentation]    Verifies the page is accessible with correct basic auth credentials.
+    [Tags]    smoke
     Open Basic Auth Page With Credentials    admin    admin
     Verify Basic Auth Success
 
 Page Title With Valid Credentials
     [Documentation]    Verifies the page title is correct when authenticated.
+    [Tags]    regression
     Open Basic Auth Page With Credentials    admin    admin
     Get Title    *=    The Internet

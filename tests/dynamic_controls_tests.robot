@@ -17,7 +17,7 @@ Test Tags           dynamic    forms    dynamic-controls
 *** Test Cases ***
 Checkbox Is Visible By Default
     [Documentation]    Verifies the checkbox is visible when the page first loads.
-    [Tags]    smoke
+    [Tags]    regression
     Open Dynamic Controls Page
     Wait For Elements State    ${CHECKBOX}    visible
 
@@ -30,13 +30,13 @@ Remove Checkbox Via Toggle Button
 
 Input Is Disabled By Default
     [Documentation]    Verifies the text input is disabled when the page first loads.
-    [Tags]    smoke
+    [Tags]    regression
     Open Dynamic Controls Page
     Verify Input Is Disabled
 
 Enable Input Via Toggle Button
     [Documentation]    Verifies clicking Enable makes the text input editable.
-    [Tags]    smoke
+    [Tags]    regression
     Open Dynamic Controls Page
     Toggle Input And Wait
     Verify Input Is Enabled

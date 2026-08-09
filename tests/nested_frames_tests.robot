@@ -17,7 +17,7 @@ Test Tags           frames    nested-frames
 *** Test Cases ***
 Top Frame Is Present
     [Documentation]    Verifies the top frameset frame is present on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Nested Frames Page
     Wait For Elements State    ${FRAME_TOP}    attached
 

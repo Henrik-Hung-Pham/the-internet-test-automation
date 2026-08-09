@@ -17,7 +17,7 @@ Test Tags           navigation    floating-menu
 *** Test Cases ***
 Floating Menu Is Visible On Page Load
     [Documentation]    Verifies the floating menu is visible when the page initially loads.
-    [Tags]    smoke
+    [Tags]    regression
     Open Floating Menu Page
     Verify Floating Menu Is Visible
 
@@ -29,7 +29,7 @@ Menu Links Are All Visible On Load
 
 Floating Menu Remains Visible After Scroll
     [Documentation]    Verifies the floating menu stays visible after scrolling to the bottom of the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Floating Menu Page
     Scroll To Bottom Of Page
     Verify Floating Menu Is Visible

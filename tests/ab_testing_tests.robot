@@ -11,16 +11,18 @@ Suite Teardown      Close Browser
 Test Setup          New Context
 Test Teardown       Close Context
 
-Test Tags           navigation    ab-testing    smoke
+Test Tags           navigation    ab-testing
 
 
 *** Test Cases ***
 Page Renders Valid AB Test Variant
     [Documentation]    Verifies the A/B test page heading is one of the two valid experiment variants.
+    [Tags]    smoke
     New Page    ${URL_ABTEST}
     Verify AB Test Heading Is Valid
 
 Page Title Is The Internet
     [Documentation]    Verifies the page title is set correctly.
+    [Tags]    regression
     New Page    ${URL_ABTEST}
     Get Title    *=    The Internet

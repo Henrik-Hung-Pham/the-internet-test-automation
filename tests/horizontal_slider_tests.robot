@@ -17,7 +17,7 @@ Test Tags           mouse-interaction    horizontal-slider
 *** Test Cases ***
 Slider Is Present On Page
     [Documentation]    Verifies the range slider element is visible on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Horizontal Slider Page
     Wait For Elements State    ${SLIDER}    visible
 
