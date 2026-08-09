@@ -3,7 +3,7 @@ Documentation       Login tests across all Playwright browsers (chromium, firefo
 ...                 Data-driven via Test Template — each case supplies the row
 ...                 [ username | password | expected flash message | browser ].
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/login_keywords.resource
 

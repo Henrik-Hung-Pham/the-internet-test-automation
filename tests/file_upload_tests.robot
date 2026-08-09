@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       File Upload tests — verifies uploading a file via the browser's file input.
 
-Library             Browser    timeout=30s
+Resource            ../resources/common.resource
 Resource            ../resources/variables/global_variables.resource
 Resource            ../resources/keywords/file_upload_keywords.resource
 
