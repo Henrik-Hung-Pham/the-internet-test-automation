@@ -17,7 +17,7 @@ Test Tags           navigation    broken-images
 *** Test Cases ***
 Page Contains Images
     [Documentation]    Verifies the broken images page renders image elements.
-    [Tags]    smoke
+    [Tags]    regression
     Open Broken Images Page
     Verify Page Has Images
 
@@ -30,7 +30,7 @@ Broken Images Are Present
 
 Not All Images Are Broken
     [Documentation]    Verifies not every image on the page is broken.
-    [Tags]    regression
+    [Tags]    smoke
     Open Broken Images Page
     ${total}=    Get Element Count    ${ALL_IMAGES}
     ${broken}=    Get Broken Image Count

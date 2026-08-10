@@ -11,17 +11,19 @@ Suite Teardown      Close Browser
 Test Setup          New Context
 Test Teardown       Close Context
 
-Test Tags           dynamic    infinite-scroll    smoke
+Test Tags           dynamic    infinite-scroll
 
 
 *** Test Cases ***
 Page Loads With Initial Content
     [Documentation]    Verifies the infinite scroll page renders with a content container.
+    [Tags]    regression
     Open Infinite Scroll Page
     ${count}=    Get Element Count    div#content
     Should Be True    ${count} > 0
 
 Scrolling Loads Additional Content
     [Documentation]    Verifies scrolling down loads more paragraph content via infinite scroll.
+    [Tags]    smoke
     Open Infinite Scroll Page
     Wait For More Paragraphs

@@ -11,17 +11,19 @@ Suite Teardown      Close Browser
 Test Setup          New Context
 Test Teardown       Close Context
 
-Test Tags           forms    file-upload    smoke
+Test Tags           forms    file-upload
 
 
 *** Test Cases ***
 Upload Page Has File Input
     [Documentation]    Verifies the file upload page renders the file input element.
+    [Tags]    smoke
     Open File Upload Page
     Wait For Elements State    ${FILE_INPUT}    visible
 
 Upload A Text File
     [Documentation]    Uploads a temporary text file and verifies its name is shown after upload.
+    [Tags]    regression
     Open File Upload Page
     ${temp_file}=    Create Temporary Text File
     Upload File    ${temp_file}

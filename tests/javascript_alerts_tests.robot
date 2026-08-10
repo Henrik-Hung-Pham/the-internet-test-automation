@@ -24,21 +24,21 @@ JS Alert Can Be Accepted
 
 JS Confirm Accept Shows OK Result
     [Documentation]    Verifies accepting a JS confirm dialog shows the OK result message.
-    [Tags]    smoke
+    [Tags]    regression
     Open JavaScript Alerts Page
     Trigger JS Confirm And Accept
     Verify Result Text    You clicked: Ok
 
 JS Confirm Dismiss Shows Cancel Result
     [Documentation]    Verifies dismissing a JS confirm dialog shows the Cancel result message.
-    [Tags]    smoke
+    [Tags]    regression
     Open JavaScript Alerts Page
     Trigger JS Confirm And Dismiss
     Verify Result Text    You clicked: Cancel
 
 JS Prompt With Text Shows Entered Value
     [Documentation]    Verifies entering text in a JS prompt dialog displays the entered text in the result.
-    [Tags]    smoke
+    [Tags]    regression
     Open JavaScript Alerts Page
     Trigger JS Prompt And Enter Text    Robot Framework
     Verify Result Text    You entered: Robot Framework

@@ -17,7 +17,7 @@ Test Tags           forms    key-presses
 *** Test Cases ***
 Key Press Input Is Present
     [Documentation]    Verifies the key press input element is visible.
-    [Tags]    smoke
+    [Tags]    regression
     Open Key Presses Page
     Wait For Elements State    ${KEY_INPUT}    visible
 
@@ -30,7 +30,7 @@ Press Letter B
 
 Press Space Key
     [Documentation]    Verifies pressing Space is detected and the result shows SPACE.
-    [Tags]    smoke
+    [Tags]    regression
     Open Key Presses Page
     Press Key In Input    Space
     Verify Key Result    SPACE

@@ -23,7 +23,7 @@ Modal Appears On Page Load
 
 Modal Can Be Closed
     [Documentation]    Verifies the modal can be dismissed by clicking the close link.
-    [Tags]    smoke
+    [Tags]    regression
     Open Entry Ad Page
     Verify Modal Is Visible
     Close Modal

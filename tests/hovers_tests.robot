@@ -17,7 +17,7 @@ Test Tags           mouse-interaction    hovers
 *** Test Cases ***
 Three Figures Are Present
     [Documentation]    Verifies three hoverable figure elements exist on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Hovers Page
     ${count}=    Get Element Count    div.figure
     Should Be Equal As Integers    ${count}    3
@@ -31,21 +31,21 @@ Hover Figure 1 Reveals Caption
 
 Hover Figure 1 Shows User 1
     [Documentation]    Verifies the first figure caption contains user1's profile text.
-    [Tags]    smoke
+    [Tags]    regression
     Open Hovers Page
     Hover Over Figure    ${FIGURE_1}
     Verify Figure Caption Contains Username    ${FIGURE_CAPTION_1}    user1
 
 Hover Figure 2 Shows User 2
     [Documentation]    Verifies the second figure caption contains user2's profile text.
-    [Tags]    smoke
+    [Tags]    regression
     Open Hovers Page
     Hover Over Figure    ${FIGURE_2}
     Verify Figure Caption Contains Username    ${FIGURE_CAPTION_2}    user2
 
 Hover Figure 3 Shows User 3
     [Documentation]    Verifies the third figure caption contains user3's profile text.
-    [Tags]    smoke
+    [Tags]    regression
     Open Hovers Page
     Hover Over Figure    ${FIGURE_3}
     Verify Figure Caption Contains Username    ${FIGURE_CAPTION_3}    user3

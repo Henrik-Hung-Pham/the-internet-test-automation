@@ -17,7 +17,7 @@ Test Tags           mouse-interaction    drag-and-drop
 *** Test Cases ***
 Columns Are Present On Page Load
     [Documentation]    Verifies both draggable columns exist on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Drag And Drop Page
     Wait For Elements State    ${COLUMN_A}    visible
     Wait For Elements State    ${COLUMN_B}    visible
@@ -30,7 +30,7 @@ Column A Header Is Initially A
 
 Column B Header Is Initially B
     [Documentation]    Verifies column B header reads "B" before any drag interaction.
-    [Tags]    smoke
+    [Tags]    regression
     Open Drag And Drop Page
     Verify Column Header Text    ${COLUMN_B_HEADER}    B
 

@@ -18,7 +18,7 @@ Test Tags           navigation    challenging-dom
 *** Test Cases ***
 Page Loads With Table
     [Documentation]    Verifies the challenging DOM page renders with a data table.
-    [Tags]    smoke
+    [Tags]    regression
     Open Challenging DOM Page
     Verify Table Has Rows
 

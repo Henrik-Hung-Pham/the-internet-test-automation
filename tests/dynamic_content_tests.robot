@@ -23,7 +23,7 @@ Page Renders Three Content Rows
 
 Page Renders Content Images
     [Documentation]    Verifies each content row has an image.
-    [Tags]    smoke
+    [Tags]    regression
     Open Dynamic Content Page
     Verify Content Images Are Present
 

@@ -17,7 +17,7 @@ Test Tags           forms    inputs
 *** Test Cases ***
 Number Input Is Present
     [Documentation]    Verifies the number input field is visible on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Inputs Page
     Wait For Elements State    ${NUMBER_INPUT}    visible
 
