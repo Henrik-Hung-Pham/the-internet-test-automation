@@ -1,0 +1,18 @@
+# Template for a new environment.
+#
+# Copy this file to <environment-name>.yaml, fill in the real values, and pass it with
+# --variablefile. Do NOT commit an environment file pointing at a host that does not
+# exist: a config that cannot be run is worse than no config, because it looks tested.
+#
+#   robot  --variablefile resources/environments/<environment-name>.yaml  tests/
+#
+# Only BASE_URL needs overriding. Every URL_* in resources/variables/global_variables.resource
+# is derived from it, so all pages follow the selected environment automatically.
+#
+# Credentials are here only because the-internet is a public demo site with published
+# logins. For a real deployment, inject them from the CI secret store instead of a file
+# in version control — e.g. --variable PASSWORD:%{APP_PASSWORD}.
+
+BASE_URL: https://replace-me.example.com
+USERNAME: replace_me
+PASSWORD: replace_me
