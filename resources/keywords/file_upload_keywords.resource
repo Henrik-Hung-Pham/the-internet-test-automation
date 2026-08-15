@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       File Upload Keywords
 
-Library             Browser    timeout=30s
+Resource            ../common.resource
 Resource            ../locators/file_upload_locators.resource
 Resource            ../variables/global_variables.resource
 
