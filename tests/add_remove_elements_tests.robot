@@ -33,7 +33,7 @@ Add Multiple Elements
 
 Remove Element After Adding
     [Documentation]    Verifies a Delete button can be removed after it is added.
-    [Tags]    smoke
+    [Tags]    regression
     Open Add Remove Elements Page
     Add Element
     Verify Delete Button Count    1

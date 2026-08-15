@@ -17,7 +17,7 @@ Test Tags           forms    dropdown
 *** Test Cases ***
 Dropdown Is Present On Page
     [Documentation]    Verifies the dropdown element is visible on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Dropdown Page
     Wait For Elements State    ${DROPDOWN}    visible
 
@@ -30,7 +30,7 @@ Select Option 1
 
 Select Option 2
     [Documentation]    Verifies Option 2 can be selected from the dropdown.
-    [Tags]    smoke
+    [Tags]    regression
     Open Dropdown Page
     Select Dropdown Option    2
     Verify Selected Option    Option 2

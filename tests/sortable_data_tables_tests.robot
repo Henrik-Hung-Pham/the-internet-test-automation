@@ -17,14 +17,14 @@ Test Tags           tables    navigation
 *** Test Cases ***
 Table 1 Is Present With Data
     [Documentation]    Verifies table 1 is visible and contains its data rows.
-    [Tags]    smoke
+    [Tags]    regression
     Open Sortable Data Tables Page
     Wait For Elements State    ${TABLE_1}    visible
     Verify Table Has Rows
 
 Table 2 Is Present
     [Documentation]    Verifies table 2 is visible on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Sortable Data Tables Page
     Wait For Elements State    ${TABLE_2}    visible
 

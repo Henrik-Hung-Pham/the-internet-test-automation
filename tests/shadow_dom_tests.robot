@@ -11,12 +11,13 @@ Suite Teardown      Close Browser
 Test Setup          New Context
 Test Teardown       Close Context
 
-Test Tags           javascript    shadow-dom    smoke
+Test Tags           javascript    shadow-dom
 
 
 *** Test Cases ***
 Shadow DOM Page Loads
     [Documentation]    Verifies the shadow DOM page renders both custom element hosts.
+    [Tags]    regression
     Open Shadow DOM Page
     ${count}=    Get Element Count    my-paragraph
     Should Be Equal As Integers    ${count}    2
@@ -24,10 +25,12 @@ Shadow DOM Page Loads
 
 First Shadow Host Contains Expected Text
     [Documentation]    Verifies the first shadow DOM element contains the expected paragraph text.
+    [Tags]    smoke
     Open Shadow DOM Page
     Verify Shadow DOM Contains Text    1    Let's have
 
 Second Shadow Host Contains Expected Text
     [Documentation]    Verifies the second shadow DOM element contains expected paragraph text.
+    [Tags]    regression
     Open Shadow DOM Page
     Verify Shadow DOM Contains Text    2    Let's have some different text

@@ -17,7 +17,7 @@ Test Tags           navigation    broken-images
 *** Test Cases ***
 Page Contains Images
     [Documentation]    Verifies the broken images page renders its three image elements.
-    [Tags]    smoke
+    [Tags]    regression
     Open Broken Images Page
     Verify Page Has Images
 
@@ -25,7 +25,7 @@ Exactly The Two Known Images Are Broken
     [Documentation]    Verifies which images are broken, not just that some number of them are.
     ...                An assertion of "more than zero broken" would still pass if every
     ...                image on the page broke.
-    [Tags]    regression
+    [Tags]    smoke
     Open Broken Images Page
     Verify Broken Images Are Exactly    asdf.jpg    hjkl.jpg
 

@@ -17,7 +17,7 @@ Test Tags           navigation    dynamic    disappearing-elements
 *** Test Cases ***
 Navigation Menu Is Visible
     [Documentation]    Verifies the navigation menu is present on the page.
-    [Tags]    smoke
+    [Tags]    regression
     Open Disappearing Elements Page
     Verify Nav Menu Is Visible
 

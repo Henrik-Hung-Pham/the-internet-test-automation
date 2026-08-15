@@ -17,7 +17,7 @@ Test Tags           navigation    file-download
 *** Test Cases ***
 File Download Page Has Download Links
     [Documentation]    Verifies at least one downloadable file link is available.
-    [Tags]    smoke
+    [Tags]    regression
     Open File Download Page
     Verify Download Links Are Present
 

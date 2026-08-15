@@ -17,7 +17,7 @@ Test Tags           navigation    typos
 *** Test Cases ***
 Typos Page Loads With Two Paragraphs
     [Documentation]    Verifies the typos page renders exactly two paragraph elements.
-    [Tags]    smoke
+    [Tags]    regression
     Open Typos Page
     Verify Page Loads With Paragraphs
 

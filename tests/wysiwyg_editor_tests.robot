@@ -17,7 +17,7 @@ Test Tags           frames    javascript    wysiwyg
 *** Test Cases ***
 WYSIWYG Editor Page Loads
     [Documentation]    Verifies the WYSIWYG editor page loads with the TinyMCE iframe visible.
-    [Tags]    smoke
+    [Tags]    regression
     Open WYSIWYG Editor Page
     Wait For Elements State    ${IFRAME}    visible
 

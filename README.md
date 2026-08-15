@@ -45,6 +45,25 @@ To run a single suite (e.g. the cross-browser login tests):
 robot tests/login_cross_browser_tests.robot
 ```
 
+### Test Tags
+
+Every test carries exactly one tier tag:
+
+| Tag | Meaning | Size |
+|---|---|---|
+| `smoke` | The single most important behaviour of each feature — one test per suite | 36 tests, ~1m20s on one browser |
+| `regression` | Everything else: edge cases, negative paths, variations | 102 tests |
+
+```bash
+robot --include smoke tests/          # fast confidence check
+robot --include regression tests/     # full depth
+```
+
+`smoke` is a *selection*, not a label of approval — if it grows to cover most of
+the suite it stops being useful as a fast signal. Suites also carry feature tags
+(`forms`, `dynamic`, `frames`, …) and the login suite carries browser tags
+(`chromium`, `firefox`, `webkit`) that CI uses to split its matrix.
+
 
 
 To generate beautiful reports, you first need to install Allure.
@@ -91,19 +110,25 @@ docker-compose up --build
     -   `keywords/`: Higher-level keywords.
     -   `locators/`: UI element locators.
     -   `variables/`: Global configuration and test data.
-    -   `environments/`: Environment-specific config files (dev, staging, prod).
+    -   `environments/`: Environment-specific config files.
 
 ## Environment Configuration
 
-To run tests against different environments:
+The application under test, [the-internet](https://the-internet.herokuapp.com/), is a
+single public deployment — it has no dev or staging tier. So there is exactly one
+environment file, and it is the one CI actually runs:
 
 ```bash
-# Dev (default)
-pabot --testlevelsplit --variablefile resources/environments/dev.yaml tests/
-
-# Staging
-pabot --testlevelsplit --variablefile resources/environments/staging.yaml tests/
-
-# Production
 pabot --testlevelsplit --variablefile resources/environments/prod.yaml tests/
 ```
+
+To add an environment, copy `resources/environments/example.yaml.template` to
+`<name>.yaml` and pass it with `--variablefile`. Overriding `BASE_URL` is enough —
+every `URL_*` in `resources/variables/global_variables.resource` is derived from it,
+so all pages follow the selected environment.
+
+Environment files should point at hosts that exist. A `dev.yaml` aimed at a
+non-existent server is worse than no file at all: it implies coverage that was never
+run. Credentials belong in the CI secret store rather than in version control
+(`--variable PASSWORD:%{APP_PASSWORD}`); they are committed here only because this
+demo site publishes its own logins.
