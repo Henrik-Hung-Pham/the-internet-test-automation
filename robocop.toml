@@ -1,0 +1,13 @@
+# Robocop configuration — auto-discovered by `robocop check .`
+# Makes linting deterministic and shareable instead of relying on CLI defaults.
+# Docs: https://robocop.dev/
+
+[tool.robocop]
+# Generated artefacts / virtualenv are also covered by .gitignore, but exclude
+# them explicitly so `robocop check .` is safe to run on a dirty working tree.
+exclude = ["results", "allure_results", "pabot_results", ".venv", ".robocop_cache"]
+
+[tool.robocop.lint]
+# Keep the line length explicit (matches the current default) so a future
+# Robocop release changing the default can't silently alter our gate.
+configure = ["line-too-long.line_length=120"]
