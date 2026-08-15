@@ -21,16 +21,22 @@ File Download Page Has Download Links
     Open File Download Page
     Verify Download Links Are Present
 
-First Download Link Has A Filename
-    [Documentation]    Verifies the first download link has non-empty text (the filename).
+First Download Link Points At The File It Names
+    [Documentation]    Verifies the link text is the filename it actually links to, rather
+    ...                than merely being non-empty.
     [Tags]    smoke
     Open File Download Page
     ${text}=    Get First Download Link Text
+    ${href}=    Get First Download Link Href
     Should Not Be Empty    ${text}
+    Should End With    ${href}    /download/${text}
+    ...    msg=Link text "${text}" does not match its href ${href}
 
-Download File Starts Successfully
-    [Documentation]    Verifies clicking a download link initiates a file download.
+Downloaded File Is Written To Disk
+    [Documentation]    Verifies clicking a download link produces a real, non-empty file saved
+    ...                under the advertised filename — not merely that a download event fired.
     [Tags]    regression
     Open File Download Page
+    ${expected_filename}=    Get First Download Link Text
     ${file_info}=    Download First File
-    Should Not Be Empty    ${file_info}[saveAs]
+    Verify Downloaded File Is On Disk    ${file_info}    ${expected_filename}

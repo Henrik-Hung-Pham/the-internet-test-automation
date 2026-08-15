@@ -16,11 +16,12 @@ Test Tags           javascript    shadow-dom
 
 *** Test Cases ***
 Shadow DOM Page Loads
-    [Documentation]    Verifies the shadow DOM page loads with custom element hosts.
+    [Documentation]    Verifies the shadow DOM page renders both custom element hosts.
     [Tags]    regression
     Open Shadow DOM Page
     ${count}=    Get Element Count    my-paragraph
-    Should Be True    ${count} > 0
+    Should Be Equal As Integers    ${count}    2
+    ...    msg=The shadow DOM example should render two my-paragraph hosts
 
 First Shadow Host Contains Expected Text
     [Documentation]    Verifies the first shadow DOM element contains the expected paragraph text.
